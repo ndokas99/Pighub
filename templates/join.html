@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Join Pighub</title>
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+	<script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<style>
+	body{
+		background-image: url("{{ url_for('static', filename='images/cover.jpg')}}");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	.container-fluid{
+		margin-top: 5%;
+		width: 84%;
+		margin-left: 8%;
+		background: #343a40;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-radius: 20px;
+	}	
+	label {
+		color: silver;
+	}
+    h3{
+        text-align: center;
+        color: darkgrey;
+    }
+    #logo{
+        border-radius: 35px;
+        color: white;
+        background: #0c5460;
+    }
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <h3>Enter details of business</h3>
+    <form action="/write" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input required type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input required type="text" class="form-control" id="address" name="address">
+      </div>
+      <div class="form-group">
+        <label for="address">Contact details</label>
+        <textarea required type="text" class="form-control" id="cont" name="contacts"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="products">Products</label>
+        <textarea required type="text" class="form-control" id="products" name="products"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="services">Services</label>
+          <textarea required type="text" class="form-control" id="services" name="services"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="logo">Logo</label>
+        <br>
+        <input type="file" id="logo" name="logo">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>	
+</body>
+</html>

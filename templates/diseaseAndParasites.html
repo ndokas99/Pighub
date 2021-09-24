@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Disease and Parasites</title>
+    <link href="{{ url_for('static', filename='css/simpleGridTemplate.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<style>
+	h3{
+		color: maroon;
+		text-align: center;
+		font-family: Algerian, serif;
+	}
+</style>
+</head>
+<body>
+<!-- Main Container -->
+<div class="container">
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+   <a class="navbar-brand" href="#">Diseases and Parasites</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+         </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="/breeds">Breeds</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/breeding">Types of breeding</a>
+         </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="/management">Care and Management</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/housing">Housing Management</a>
+         </li>
+      </ul>
+   </div>
+  </nav>
+  <br/>
+  <header class="header">
+    <h4 class="logo">PARASITES</h4>
+	<p style="text-align: center">Parasites are divided into external and internal parasites.</p>
+  </header>
+  <section class="intro">
+	<div class="column">
+		<h3>Internal Parasites</h3>
+	</div>
+	<div class="text_column">
+		<h3>Worms</h3>
+		<p>Worms are one of the most serious threats to pig keeping. There are more than 30 types affecting the intestines of pigs. The most important two are the intestinal roundworm and the tape worm.Roundworm live in the gut and take food from the pig. The pig can therefore become thin.  Giant intestinal roundworms (Ascaris lumbricoides) are common around the world, especially in warm, moist climates. These worms are large, about the size of a pencil. The infection begins with the ingestion of eggs which are usually present in contaminated soil, or on fruits and vegetables grown in infected soil.</p>
+		<h4>Symptoms</h4>
+		<p>Anorexia in advanced stages. Anemia loss of condition. Weight loss in later stages. When the worms die suddenly after treatment, they can block the gut and cause sudden death </p>
+		<h4>Prevention</h4>
+		<p>Control with medicine in the food is useful and provide clean and dry pens. Rotational grazing and periodic disinfection of pastures. Separation of young ones from adults. Washing sows before farrowing.</p>
+	</div>
+	<div class="text_column">
+		<h3>Tapeworm</h3>
+		<p>Tapeworms are flat and long ribbon like creatures which are common in all parts of the world. Tapeworms do not have a digestive system so they receive their food through their skin as they absorb our nutrients. They especially absorb folic acid and vitamin B-12. These parasites may cause what is referred to as “verminous intoxication” as they put out and leave dangerous waste products in our bodies. These tapeworms can roll themselves into a ball and can be felt on the right side of the abdomen under the liver.</p>
+		<p>Pork measles is caused by tapeworms which live in the muscles of pigs. They do not usually affect the pig, but can lead to pain and the pig may find it difficult to move around. When people eat undercooked measly pork, the worms develop inside the people, and can make them very sick.</p>
+		<h4>Symptoms</h4>
+		<p>Poor growth Rough grey hair coat Swollen belly Emaciation Anaemia </p>
+		<h4>Prevention</h4>
+		<p>Prevent the pigs from wandering about where they can feed on human faeces Make sure that people working with pigs use toilets (hygiene and sanitation) Deworming </p>
+	</div>
+	  <div class="column">
+		<h3>External Parasites</h3>
+	  </div>
+	<div class="text_column">
+		<h3>Mange</h3>
+		<p>It is caused by small parasites called mites that live in the skin. They provoke severe itching and irritation. Lesions, or scabs, on the animals may start on any part of the body, but usually appear first on the head, around the eyes, nose, or ears; lesions may progress to hyperkeratosis and exfoliation of epidermal debris.</p>
+		<h4>Symptoms</h4>
+		<p> The pig becomes itchy, and scratches and rubs against the walls of the sty and other objects with the skin between the legs, around the eyes, ears and neck being principally affected. The coat looks dull, and there are bare patches, heavy crusts, and lines on the body that look like ribs Restlessness and itching which can be very severe Red pimples on skin, which turn into crusts and scabs. Later the skin looks very rough, is thickened and covered with flakes scratching. </p>
+		<h4>Prevention</h4>
+		<p>Wash the sow before farrowing at least twice at a one week interval. Treat gilts upon entering the farm and before serving. Wash all pigs at the beginning of fattening if mange is already a problem. Maintain proper animal nutrition and health program to reduce severity and spread of mange. Recommended control products are: ivermectin (1% injectable), or Malathion (1% spray). General cleanliness. </p>
+		<h4>Treatment</h4>
+		<p>Remove scales and dirt with soap and water and a stiff brush. Afterwards the pig should be washed with organophosphate compounds. Repeat this treatment several times Ivermectin injection is a very effective treatment against mange and all other parasites. Spraying the animals with cattle dip also kills many parasites on the skin Herbal treatment: Smearing with coconut oil can be an effective control in cases of light contamination </p>
+	</div>
+	<div class="text_column">
+		<h3>Lice</h3>
+		<p>These are blood suckers that also cause irritation of the skin. The hog louse is the largest louse species (6,4mm) commonly associated with domestic animals. It is found most frequently in the folds of skin behind the ears and between the legs. The blood-sucking activity of hog lice results in much irritation and discomfort to swine</p>
+		<h4>Symptoms</h4>
+		<p>Itching Skin may show red spots or bite wounds. Thick skin and rough hair coat. Anemia in severe cases especially in piglets. </p>
+		<h4>Prevention</h4>
+		<p>General cleanliness Treat piglets before putting them in fattening house. Fatteners don't need to be treated Treat gilts before first service Treat boars twice a year Treat new stock on arrival and seven days later. Piglets below three weeks should not be treated </p>
+		<h4>Treatment</h4>
+		<p>The insecticide benzene hex chloride is a very effective remedy (0.1 - 0.25% solution) against lice. Treatment should be repeated after 7 days since the insecticide only kills adults and not eggs. Lice can be kept away to a certain extent by planting a pole sturdily in the ground at an angle of 45° with an old sack wound around it immersed in crude oil or used motor-oil.</p>
+	</div>
+  </section>
+  <header class="header">
+    <h4 class="logo">DISEASES</h4>
+  </header>
+  <section class="intro">
+  	<div class="text_column">
+		<h3>Anaphrodisias</h3>
+		<p>When the sow does not come on heat </p>
+		<h4>Symptoms</h4>
+		<p>No heat signs; This could be caused by low body weight due to poor feeding, overweight, mineral deficiency, intestinal worms, chronic disease, the animal has just given birth, heavy infestation with parasites </p>
+		<h4>Prevention</h4>
+		<p>Improve feeding of mineral-rich feeds. Regularly deworm your animals. Allow the female to stay with the boar. </p>
+		<h4>Treatment</h4>
+		<p>Gilts should not be treated at all because they may show anaphrodisias after every litter; if this hormone is used Sows should be treated on the same day as weaning, and in very severe cases, 3 weeks after weaning Repeating treatment is of no use </p>
+	</div>
+	<div class="text_column">
+		<h3>Leptospirosis</h3>
+		<h4>Symptoms</h4>
+		<p>Fever, anorexia, diarrhea, bloody urine, nervous symptoms caused by meningitis. Abortion in last trimester. In sows which are affected later, weak piglets are born. Mummified and macerated foetuses are common in the litters. Infertility associated with venereal spread may be responsible for repeat breeders.</p>
+		<h4>Prevention and Treatment</h4>
+		<p>Elimination of mite and rats and other rodents.</p>
+	</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">Copyright &copy; PigHub. All rights reserved.</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

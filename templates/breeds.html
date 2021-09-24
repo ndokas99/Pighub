@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Breeds of pigs</title>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <link href="{{ url_for('static', filename='css/simpleGridTemplate.css') }}" rel="stylesheet" type="text/css">
+        <style>
+            @media all and (min-width: 768px) and (max-width: 1057px) {
+                .text_column{
+                    height: 265px !important;
+                }
+            }
+        </style>
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+   <a class="navbar-brand" href="#">Breeds</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/breeding">Types of breeding</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/management">Care and Management</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/housing">Housing Management</a>
+         </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="/diseaseAndParasites">Disease and Parasites</a>
+         </li>
+      </ul>
+   </div>
+  </nav>
+  <br/>
+  <!-- Hero Section -->
+  <section class="intro">
+    <div class="column">
+        <p><b>Native Breeds:</b> These pigs can be found throughout the country. They are a small body size compared to other exotic and crosses pig types. Their names vary from region to region, for example: Hurra, and Dharane Kalo Banggur.</p>
+        <p><b>Exotic breeds:</b> The most common pig breeds for commercial pig production are the Yorkshire, Landrace, Hampshire, Duroc, and Tamworth breeds. These breeds produce lean meat combined with efficient feed conversion Compared to local pig breeds, these commercial breeds are less resistant to diseases and suffer more from hot weather and low quality feeds.</p>
+    </div>
+  </section>
+  <!-- Stats Gallery Section -->
+    {% for group in breeds %}
+    <div class="gallery">
+        {% for breed in group %}
+        <div class="thumbnail">
+            <img src="../static/images/{{ breed[0] }}.jpg" alt="{{breed[0]}}" class="cards"/>
+            <h4>{{ breed[0] }}</h4>
+            <p class="text_column">{{ breed[1] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+  <!-- Copyrights Section -->
+  <div class="copyright">Copyright &copy; PigHub. All rights reserved.</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

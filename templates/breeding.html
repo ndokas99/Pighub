@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Types of breeding</title>
+        <link href="{{ url_for('static', filename='css/simpleGridTemplate.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    </head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+   <a class="navbar-brand" href="#">Types of breeding</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/breeds">Breeds</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/management">Care and Management</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/housing">Housing Management</a>
+         </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="/diseaseAndParasites">Disease and Parasites</a>
+         </li>
+      </ul>
+   </div>
+  </nav>
+  <br/>
+  <!-- Hero Section -->
+  <section class="intro">
+    <div class="text_column">
+		<h2>Out breeding</h2>
+     	<p>Mating individuals of the same breed but who are less closely related than the average of the breed. There should not be a common ancestor for at least four generation back and the females with which he is mated. It is a useful mating system in purebred individual.</p>
+    </div>
+	<div class="text_column">
+		<h2>In breeding</h2>
+     	<p>Mating between individuals of the same breed but which are more closely related than the average of the breed. This could be between as close individuals as full sibs or sire – daughter, mother - son.  Pure breeding is a special kind of in-breeding.  The effect of inbreeding is the concentration of common genes in the offspring. This high frequency of homozygous gene pairs applies to both desirable and undesirable traits. Many undesirable traits e.g. hernia and cryptorchidism involve recessive genes thus inbreeding perpetuates their expression phenotypically.  In breeding causes decrease in litter size and increases mortality. Inbred sows are inferior in milking and mothering ability. It delays sexual maturity in gilts and boars.  Inbred have less sexual libido. Inbred gilts have fewer eggs during oestrus and farrow smaller litters than those out bred.</p>
+    </div>
+	<div class="text_column">
+		<h2>Cross breeding </h2>
+     	<p>Mating two individuals from different breeds thus introducing into the progeny a gene combination that is different from that existing in either parent or in the breed of either parent. Cross breeding can involve two or more breeds, depending on the desired result. The sole purpose of cross breeding is to take advantage of the observed improvement in performance of the progeny above that of either parent - hybrid vigour or heterosis.</p>
+    </div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">Copyright &copy; PigHub. All rights reserved.</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css">
+	<style>
+		body{
+			background-image: url("{{ url_for('static', filename='images/cover.jpg')}}");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		.copyright {
+			text-align: center;
+			padding: 20px 0 20px 0;
+			background-color: #717070;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+		}
+		h3 {
+			color: orangered;
+			font-family: Algerian, serif;
+		}
+		h2[class="text-center"] {
+			color: white;
+			background: #343a40;
+			border-radius: 30px;
+			margin-left: 8%;
+			width: 84%;
+			padding: 1%
+		}
+	</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">SHOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          	 <li class="nav-item">
+            	<a class="nav-link" href="/">Home</a>
+			 </li>
+			 <li class="nav-item">
+				<a class="nav-link" href="#" data-target="#myModal" data-toggle="modal">Contact Us</a>
+			 </li>
+			 <li class="nav-item">
+				<a class="nav-link" href="#" data-target="#aboutModal" data-toggle="modal">About Us</a>
+			 </li>
+             <li class="nav-item">
+            	<a class="nav-link" href="/join">Join</a>
+			 </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<div class="modal fade" id="aboutModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">ABOUT US</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="card-body">
+					<p class="card-text">PigHub is an online platform which seeks to educate farmers on information about rearing pigs, their breeds, housing requirements and, disease and parasites which affect pigs.</p>
+					<p class="card-text">It also serves to connect farmers to potential clients by providing information about the products and services they offer. </p>
+			  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">CONTACT DETAILS</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<table class="table">
+						<thead></thead>
+						<tbody>
+							<tr>
+								<td><img src="{{ url_for('static', filename='images/email.png') }}" alt="mail logo"></td>
+								<td><p class="lead">pighub@gmail.com</p></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="{{ url_for('static', filename='images/phone.png') }}" alt="phone logo">
+								</td>
+								<td><p class="lead">+263 787 710 341<br>+263 784 288 009<br>+263 774 230 964</p></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<img src="{{ url_for('static', filename='images/facebook.png') }}" alt="fb logo">
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<p class="lead">Facebook Page</p>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <hr>
+    <h2 class="text-center">ASSOCIATED RETAILER'S</h2>
+    <hr>
+    <div class="container">
+      {% for companies in collection %}
+      <div class="row text-center">
+        {% for company in companies %}
+        <div class="col-md-4 pb-1 pb-md-0">
+          <div class="card">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/'+company[4]) }}" width="400" height="200" alt="Company logo">
+            <div class="card-body">
+              <h3 class="card-title">{{ company[0] }}</h3>
+			  <h5 class="card-title">Address</h5>
+              <p class="card-text">{{ company[1] }}</p>
+			  <h5 class="card-title">Products sold</h5>
+              <p class="card-text">
+              {% for prod in company[2].split(",") %}
+                <li type="none">{{prod.strip()}}</li>
+              {% endfor %}
+              </p>
+			  <h5 class="card-title">Services offered</h5>
+              <p class="card-text">
+              {% for serv in company[3].split(",") %}
+                <li type="none">{{serv}}</li>
+              {% endfor %}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+	</div>
+    <hr>
+  	<div class="copyright">Copyright &copy; PigHub. All rights reserved.</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-4.3.1.js') }}"></script>
+  </body>
+</html>
