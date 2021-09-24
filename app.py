@@ -18,7 +18,7 @@ settings = {
 
 app = Flask(__name__)
 app.config.update(settings)
-app.debug = True
+app.debug = False
 mail = Mail(app)
 
 
