@@ -17,7 +17,8 @@ settings = {
 }
 
 app = Flask(__name__)
-app.debug = False
+app.config.update(settings)
+app.debug = True
 mail = Mail(app)
 
 
@@ -99,13 +100,13 @@ def write():
             secure_filename(f"{details['name']}.{logo.filename.split('.')[-1]}")
         )
 
-        logo.save(image)
-
         with app.app_context():
             msg = Message(sender=app.config.get("MAIL_USERNAME"), recipients=[f'<{app.config.get("MAIL_USERNAME")}>'])
             msg.subject = "Request to join Pighub"
-            msg.html = render_template("email.html", details=details, image=image)
+            msg.html = render_template("email.html", details=details, image=f"{details['name']}.{logo.filename.split('.')[-1]}")
             mail.send(msg)
+
+        logo.save(image)
 
         return redirect(url_for('shopPage'))
 
