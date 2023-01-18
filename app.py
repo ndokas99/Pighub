@@ -6,14 +6,12 @@ from os import path
 
 settings = {
     "SECRET_KEY": 'G15FH6HHD75DGFJ7JD9HD',
-    "SQLALCHEMY_DATABASE_URI": 'sqlite:///accHolders.db',
-    "SQLALCHEMY_TRACK_MODIFICATIONS": False,
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": "lereck.sibanda@students.uz.ac.zw",
-    "MAIL_PASSWORD": "R192093X"
+    "MAIL_USERNAME": "kudakwashe.ndokanga@students.uz.ac.zw",
+    "MAIL_PASSWORD": "taswenkn#3-students"
 }
 
 app = Flask(__name__)
